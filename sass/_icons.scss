@@ -1,0 +1,54 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'avengers-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 3;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.p-services [class^="icon-"], [class*=" icon-"] {
+  background-color: $avengers-highlight;
+  color: #000;
+  margin: auto;
+}
+$icons: (google-plus '\e600' #dd4b39) (facebook '\e601' #3b5998) (twitter '\e602' #00aced) (dribbble '\e603' #ea4c89) (linkedin2 '\e604' #007bb6) (paint-format '\e605') (cog '\e606') (lab '\e607');
+
+@each $icon in $icons {
+  .icon-#{nth($icon, 1)}:before {
+  content: nth($icon, 2);
+  @extend %ico-font-base;
+  }
+}
+
+.icons {
+  margin: auto;
+  margin-bottom: 10%;
+  width: 100%;
+  text-align: center;
+  span {
+    color: $avengers-highlight;
+    display: inline-block;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    line-height: 1;
+    &:hover {
+      border: $avengers-highlight;
+      -webkit-transform: scale(1.25,1.25);
+      transform: scale(1.25,1.25);
+      transition: .25s ease-in-out;
+    }
+  }
+}
+
+.icon-menu {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  &:before {
+     content: "\e608";
+  }
+} 

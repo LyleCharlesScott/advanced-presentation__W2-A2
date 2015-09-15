@@ -1,5 +1,8 @@
-$dark-orange: #fc6432;
-$white: #fff;
+$avengers-main-theme: #fc6432;
+$avengers-highlight: #fff;
+
+@import "sass/icons";
+@import "bourbon/bourbon";
 
 body {
   box-sizing: border-box;
@@ -21,7 +24,7 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"], [class*=" icon-"] {
+/*[class^="icon-"], [class*=" icon-"] {
   font-family: 'avengers-icons';
   speak: none;
   font-style: normal;
@@ -34,19 +37,20 @@ ul {
   -moz-osx-font-smoothing: grayscale;
 }
 .p-services [class^="icon-"], [class*=" icon-"] {
-  background-color: $white;
+  background-color: $avengers-highlight;
   color: #000;
   margin: auto;
 }
-.icon-paint-format:before {
-  content: "\e605";
-}
-.icon-cog:before {
-  content: "\e606";
-}
-.icon-lab:before {
-  content: "\e607";
-}
+$icons: (google-plus '\e600' #dd4b39) (facebook '\e601' #3b5998) (twitter '\e602' #00aced) (dribbble '\e603' #ea4c89) (linkedin2 '\e604' #007bb6) (paint-format '\e605') (cog '\e606') (lab '\e607');
+
+@each $icon in $icons {
+  .icon-#{nth($icon, 1)}:before {
+  content: nth($icon, 2);
+  @extend %ico-font-base;
+  }
+}*/
+
+/*
 .icon-google-plus:before {
   content: "\e600";
   background-color: #dd4b39;
@@ -67,34 +71,16 @@ ul {
   content: "\e604";
   background-color: #007bb6;
 }
-.icons {
-  margin: auto;
-  margin-bottom: 10%;
-  width: 100%;
-  text-align: center;
-  span {
-    color: $white;
-    display: inline-block;
-    -webkit-transition: -webkit-transform .25s ease-in-out;
-    transition: transform .25s ease-in-out;
-    line-height: 1;
-    &:hover {
-      border: $white;
-      -webkit-transform: scale(1.25,1.25);
-      transform: scale(1.25,1.25);
-      transition: .25s ease-in-out;
-    }
-  }
+.icon-paint-format:before {
+  content: "\e605";
 }
+.icon-cog:before {
+  content: "\e606";
+}
+.icon-lab:before {
+  content: "\e607";
+}*/
 
-.icon-menu {
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  &:before {
-     content: "\e608";
-  }
-} 
 
 /*Nav bar mobile*/
 .mobile-menu ul {
@@ -107,7 +93,7 @@ ul {
 .mobile-menu li a {
   display:block;
   font-family: Helvetica;
-  color: $white;
+  color: $avengers-highlight;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 20px;
@@ -174,7 +160,7 @@ footer {
 }
 .p-logo-1 {
   border-radius: 50%;
-  background-color: $dark-orange;
+  background-color: $avengers-main-theme;
 }
 .p-logo-2 {
   position: absolute;
@@ -189,7 +175,7 @@ footer {
   border-top-left-radius: 50%;
   -webkit-transform: rotate(-45deg);
   z-index: 99;
-  background: $white;
+  background: $avengers-highlight;
 }
 .p-logo-3 {
   position: absolute;
@@ -203,7 +189,7 @@ footer {
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
   z-index: 150;
-  background: $dark-orange;
+  background: $avengers-main-theme;
 }
 .l-home-spacer {
   height: 4em;
@@ -216,7 +202,7 @@ footer {
 }
 .p-home-text span {
   text-decoration: underline;
-  color: $dark-orange;
+  color: $avengers-main-theme;
 }
 .l-pricing-tables {
   margin-bottom: 0;
@@ -236,13 +222,13 @@ footer h1 {
 .p-divet {
   width: 0;
   height: 0;
-  border-top: 20px solid $dark-orange;
+  border-top: 20px solid $avengers-main-theme;
   border-left: 80px solid transparent;
   border-right: 80px solid transparent;
   margin: auto;
 }
 .p-title-line {
-  border-bottom: 1px $white solid;
+  border-bottom: 1px $avengers-highlight solid;
   width: 15%;
 }
 .p-title {
@@ -256,7 +242,7 @@ footer h1 {
   width: 15%;
 }
 .p-subtitle-line {
-  border-bottom: 1px $white solid;
+  border-bottom: 1px $avengers-highlight solid;
   width: 10%;
 }
 .p-portfolio .p-subtitle-line, .p-team .p-subtitle-line {
@@ -282,7 +268,7 @@ footer h1 {
   margin-bottom: 10%;
 }
 .p-team h4 {
-color: $dark-orange;
+color: $avengers-main-theme;
 }
 .l-client-carousel-button {
   position: relative;
@@ -293,26 +279,26 @@ color: $dark-orange;
 }
 .p-client-carousel-button {
   border-radius: 50%;
-  background-color: $dark-orange;
+  background-color: $avengers-main-theme;
 }
 .p-client-link {
   position: absolute;
   top: 10px;
   left: 15px;
-  color: $white;
+  color: $avengers-highlight;
 }
 .l-client-link:hover, .p-about-button:hover, .p-pricing-tables a:hover {
   background-color: #7f331b;
-  color: $dark-orange;
+  color: $avengers-main-theme;
 }
 .p-services {
-  background-color: $dark-orange;
-  color: $white;
+  background-color: $avengers-main-theme;
+  color: $avengers-highlight;
   text-align: center;
   font-size: 1em;
 }
 .p-services .p-divet {
-    border-top: 20px solid $white;
+    border-top: 20px solid $avengers-highlight;
 }
 .p-services figcaption {
   margin: auto;
@@ -328,7 +314,7 @@ color: $dark-orange;
   width: 75px;
 }
 .p-service-logo {
-  background-color: $white;
+  background-color: $avengers-highlight;
   border-radius: 50%;
 }
 .p-pricing-tables {
@@ -339,22 +325,22 @@ color: $dark-orange;
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 10%;
-  background-color: $dark-orange;
+  background-color: $avengers-main-theme;
   color: #000;
   padding-left: 0;
   border-bottom: 1px;
 }
 .p-pricing-tables li {
-  background-color: $white;
+  background-color: $avengers-highlight;
   border-bottom: solid #7f331b 2px;
 }
 .p-pricing-tables li:nth-child(1) {
   background-color: #7f331b;
   font-weight: bolder;
-  color: $white;
+  color: $avengers-highlight;
 }
 .p-pricing-tables li:nth-child(2) {
-  color: $dark-orange;
+  color: $avengers-main-theme;
   font-weight: bolder;
 }
 .p-pricing-tables div:last-child {
@@ -363,8 +349,8 @@ color: $dark-orange;
   padding-top: .75em;
 }
 .p-pricing-tables a {
-  background-color: $dark-orange;
-  color: $white;
+  background-color: $avengers-main-theme;
+  color: $avengers-highlight;
   padding: .4em 10% .4em 10%;
 }
 .big-little-slider {
@@ -385,11 +371,11 @@ color: $dark-orange;
   text-align: center;
 }
 .p-about {
-  color: $white;
+  color: $avengers-highlight;
   background-color: #000;
 }
 .p-about .p-divet {
-  border-top: 20px solid $white;
+  border-top: 20px solid $avengers-highlight;
 }
 .l-about-bars {
   display: flex;
@@ -409,7 +395,7 @@ progress::-webkit-progress-bar {
   background: gray;
 }
 progress::-webkit-progress-value {
-  background: $dark-orange;
+  background: $avengers-main-theme;
 }
 .l-about-button {
   text-align: center;
@@ -417,8 +403,8 @@ progress::-webkit-progress-value {
   padding-bottom: 3em;
 }
 .p-about-button {
-  background-color: $dark-orange;
-  color: $white;
+  background-color: $avengers-main-theme;
+  color: $avengers-highlight;
   border: 0;
   padding: 10px 40px 10px 40px;
 }
@@ -432,11 +418,11 @@ progress::-webkit-progress-value {
   border-top: 20px solid #000;
 }
 .p-contact {
-  background-color: $dark-orange;
-  color: $white;
+  background-color: $avengers-main-theme;
+  color: $avengers-highlight;
 }
 .p-contact .p-divet {
-  border-top: 20px solid $white;
+  border-top: 20px solid $avengers-highlight;
 }
 .l-contact-blurb {
   margin: auto;
@@ -484,31 +470,31 @@ progress::-webkit-progress-value {
   background-color: #7f331b;
 }
 ::-webkit-input-placeholder {
-  color: $white;
+  color: $avengers-highlight;
 }
 :-moz-placeholder {
-  color: $white;
+  color: $avengers-highlight;
   opacity: 1;
 }
 ::-moz-placeholder {
-  color:  $white;
+  color:  $avengers-highlight;
   opacity: 1;
 }
 ::-ms-input-placeholder {
-  color: $white;
+  color: $avengers-highlight;
 }
 .p-contact .p-button-holder {
-  background-color: $white;
-  color: $dark-orange;
+  background-color: $avengers-highlight;
+  color: $avengers-main-theme;
   text-align: center;
   padding: 2.5%;
 }
 .p-contact .p-button-holder:hover {
   background-color: #7f331b;
-  color: $white;
+  color: $avengers-highlight;
 }
 .p-author {
-  color: $dark-orange;
+  color: $avengers-main-theme;
 }
 
 @media only screen and (min-width: 568px) {
@@ -531,7 +517,7 @@ progress::-webkit-progress-value {
 .mobile-menu li {
   display: inline-block;
   &:hover {
-  background-color: $dark-orange;
+  background-color: $avengers-main-theme;
   }
 }
 .mobile-menu li a {
@@ -619,7 +605,7 @@ progress:: -webkit-progress-value {
   border-top-left-radius: 50%;
   -webkit-transform: rotate(-45deg);
   z-index: 99;
-  background: $white;
+  background: $avengers-highlight;
 }
 .p-logo-3 {
   position: absolute;
@@ -633,7 +619,7 @@ progress:: -webkit-progress-value {
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
   z-index: 150;
-  background: $dark-orange;
+  background: $avengers-main-theme;
 }
 .p-title-line {
   width: 35%;
