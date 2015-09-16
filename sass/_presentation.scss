@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'avengers-icons';
+  src: url('fonts/icomoon.eot?-lo05z1');
+  src: url('fonts/icomoon.eot?#iefix-lo05z1') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?-lo05z1') format('truetype'),
+    url('fonts/icomoon.woff?-lo05z1') format('woff'),
+    url('fonts/icomoon.svg?-lo05z1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "Droid sans", sans-serif;
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+.p-home {
+  background-image: url("https://i.imgur.com/oVRIX4Z.png");
+}
+
+.p-divet {
+  width: 0;
+  height: 0;
+  border-top: 20px solid $avengers-main-theme;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  margin: auto;
+  .p-services &, .p-about &, .p-contact & {
+    border-top: 20px solid $avengers-highlight;
+  }
+  .p-team & {
+    border-top: 20px solid #000;
+  }
+}
+
+.p-logo-1 {
+  border-radius: 50%;
+  background-color: $avengers-main-theme;
+}
+.p-logo-2 {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  -webkit-transform: rotate(-45deg);
+  z-index: 99;
+  background: $avengers-highlight;
+}
+.p-logo-3 {
+  position: absolute;
+  left: 2.5px;
+  top: 2px;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  z-index: 150;
+  background: $avengers-main-theme;
+}
+.p-home-text {
+  font-weight: lighter;
+  margin: auto;
+  width: auto;
+  text-align: center;
+}
+.p-home-text span {
+  text-decoration: underline;
+  color: $avengers-main-theme;
+}
+
+.p-title-line {
+  border-bottom: 1px $avengers-highlight solid;
+  width: 15%;
+}
+.p-subtitle-line {
+  border-bottom: 1px $avengers-highlight solid;
+  width: 10%;
+}
+.p-portfolio .p-subtitle-line, .p-team .p-subtitle-line {
+  color: #000;
+  border-bottom: 1px #bfbfbf solid;
+  width: 10%;
+}
+.p-title {
+  text-transform: uppercase;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.p-portfolio .p-title-line, .p-team .p-title-line {
+  color: #000;
+  border-bottom: 1px #bfbfbf solid;
+  width: 15%;
+}
+
+footer {
+  text-align: center;
+}
