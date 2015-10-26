@@ -237,33 +237,25 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center; }
-  .l-services-list {
-    display: inline-block; }
-  .l-services-item {
-    width: 23%;
-    margin-left: 2%;
-    margin-right: 2%;
-    display: inline-block; }
-  .l-client-inline {
-    display: inline-block;
-    margin: 0; }
+    .l-title .l-services-list {
+      display: inline-block; }
+    .l-title .l-services-item {
+      width: 23%;
+      margin-left: 2%;
+      margin-right: 2%; }
+    .l-title .l-client-inline {
+      margin: 0; }
   .l-client-carousel-button {
     display: inline-block;
     margin-left: 3%;
     margin-right: 3%; }
-  .l-client-carousel-button {
-    display: inline-block;
-    margin-left: 3%;
-    margin-right: 3%; }
-  .l-client-figure {
-    display: inline-block;
-    width: 70%;
-    margin: 3%; }
+    .l-client-carousel-button .l-client-figure {
+      width: 70%;
+      margin: 3%; }
   .l-client-figure img {
     display: inline-block; }
-  .l-client-figure-txt {
-    width: 70%;
-    display: inline-block; }
+    .l-client-figure img .l-client-figure-txt {
+      width: 70%; }
   .l-client-caption {
     display: block; }
   .l-client-headline, .l-client-subheading {
