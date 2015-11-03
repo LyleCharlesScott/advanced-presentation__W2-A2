@@ -1,3 +1,5 @@
+Deployed - Project live at: ls-zg-presentation-demo.surge.sh
+
 9/14/15
 Week 3 assignment
 
